@@ -1,0 +1,83 @@
+﻿@model IEnumerable<TCC_2._0.Models.PROTIPO>
+
+
+@{
+    ViewBag.Title = "SaidaEstoque";
+}
+
+<link href="~/css/pgCrud.css" rel="stylesheet"/>
+
+<body class="fundo">
+
+    <h2>Lista para Saida de Produtos do Estoque</h2>
+
+    
+    <div>
+
+
+        <table class="table" id="table-Saida">
+            <thead class="thead-dark">
+                <tr>
+              
+                    <th scope="col">Produto</th>
+            
+                    <th scope="col">Imagem</th>
+                    <th>Opções</th>
+
+                </tr>
+            </thead>
+            <tbody class="teste">
+                @foreach (var item in Model)
+                {
+
+                    <tr>
+                  
+                        <td>@item.PRODUTO.PRODESCRICAO @item.TIPO.TIPNOME</td>
+                  
+                        <td>
+                            @{
+                                if (item.PTIMAGEM != null)
+                                {
+                                    var base64 = Convert.ToBase64String(item.PTIMAGEM);
+                                    var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+                                    <img src='@imgSrc' style="max-width:100px; max-height:100px;" />
+                                }
+
+                            }
+
+                        </td>
+
+
+
+                        <td class="butoes">
+
+                            <a href="/ProTipo/RetirarEstoque?id=@item.PTID"><button type="button" class="btn btn-warning">Saida</button></a>
+                           
+
+                        </td>
+                    </tr>
+                }
+
+
+
+
+            </tbody>
+        </table>
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <p><a href="/ProTipo/Alerta" class="btn btn-primary">Voltar &raquo;</a></p>
+
+</body>
+
+
+
+

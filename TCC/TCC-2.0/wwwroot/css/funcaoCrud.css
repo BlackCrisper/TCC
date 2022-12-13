@@ -1,0 +1,84 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: gray;
+}
+
+.tudo {
+    display: flex;
+    justify-content: center;
+    padding:30px 30px;
+}
+
+
+
+.delete {
+    background-color: #ff5252;
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+    align-items: center;
+    height: 500%;
+    width: 300px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+}
+
+.descricao-delete {
+    height: 40px;
+    width: 200px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.btn-delete {
+    display: flex;
+}
+
+
+
+.edite {
+    background-color: #f7e169;
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+    align-items: center;
+    height: 500%;
+    width: 300px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+}
+
+.descricao-edit {
+    height: 40px;
+    width: 200px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+
+
+.create {
+    background-color: #55cb23;
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+    align-items: center;
+    height: 500%;
+    width: 300px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+}
+.descricao-create {
+    height: 40px;
+    width: 200px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/*metodos acima foram usados em "venda","compra","categorias" e "tipo" no projeto*/
+

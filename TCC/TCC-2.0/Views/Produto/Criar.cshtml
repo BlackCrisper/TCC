@@ -1,0 +1,57 @@
+﻿@model IEnumerable<TCC_2._0.Models.PRODUTO >
+
+@{
+    ViewBag.Title = "Criar";
+}
+
+<link href="~/css/pgalerta.css" rel="stylesheet"/>
+
+<h2>Criar</h2>
+
+<div>
+
+    <form action="/Produto/Criar" enctype="multipart/form-data" method="post">
+
+        <div>
+            <class ="form-group">
+                <label for="descricao">Descrição</label>
+                <input type="text" class="form-control"
+                       maxlength="100" id="descricao" name="descricao"
+                       required />
+        </div>
+
+        <div>
+            <label>Categoria: </label>
+            <select id="categoria" name="categoria">
+
+                @foreach (var item in ViewBag.listaCategoria)
+                {
+                    <option value="@item.CATID">@item.CATDESCRICAO</option>
+                }
+
+            </select>
+
+        </div>
+
+
+
+        <div class="form-group">
+            <label for="arquivo">Imagem</label>
+            <input type="file" class="form-control"
+                   id="imagem" name="imagem" />
+        </div>
+
+
+
+
+
+        <div>
+            <button type="submit" class="btn btn-success">Salvar</button>
+            <a href="/produto/index" class="btn btn-primary">Voltar</a>
+
+        </div>
+
+
+
+    </form>
+</div>

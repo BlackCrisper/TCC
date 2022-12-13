@@ -1,0 +1,63 @@
+@model IEnumerable<TCC_2._0.Models.PRODUTO>
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<link href="~/css/pgCrud.css" rel="stylesheet"/>
+
+<body class="fundo">
+
+    <h2>Lista de Marcas</h2>
+    <p><a class="btn btn-info" href="/Produto/Criar">Criar nova Marca &raquo;</a></p>
+
+    <table class="table" id="table-Marca">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Descrição</th>@*
+                <th scope="col">Categoria</th>*@
+                <th scope="col">Imagem </th>
+                <th scope="col">Opções</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+
+                <tr>
+                    <td scope="row">@item.PROID</td>
+                    <td>@item.PRODESCRICAO: @item.CATEGORIA.CATDESCRICAO</td>
+                    
+                    <td>
+                        @{
+                            if (item.PROIMAGEM != null)
+                            {
+                                var base64 = Convert.ToBase64String(item.PROIMAGEM);
+                                var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+                                <img src='@imgSrc' style="max-width:100px; max-height:100px;" />
+                            }
+
+                        }
+
+                    </td>
+
+                    <td>
+
+                        <a href="/produto/editar?id=@item.PROID"><button type="button" class="btn btn-warning">Editar</button></a>
+                        <a href="/produto/deletar?id=@item.PROID"><button type="button" class="btn btn-danger">Deletar</button></a>
+
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+
+</body>
+
+
+
+<p><a href="/ProTipo/Alerta" class="btn btn-primary">Voltar &raquo;</a></p>

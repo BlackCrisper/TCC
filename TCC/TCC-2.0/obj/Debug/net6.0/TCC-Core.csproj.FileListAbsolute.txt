@@ -1,0 +1,9 @@
+C:\Users\android\Desktop\david\TCC-2.0\TCC-2.0\obj\Debug\net6.0\TCC-Core.csproj.AssemblyReference.cache
+C:\Users\android\Desktop\david\TCC-2.0\TCC-2.0\obj\Debug\net6.0\TCC-Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\android\Desktop\david\TCC-2.0\TCC-2.0\obj\Debug\net6.0\TCC-Core.AssemblyInfoInputs.cache
+C:\Users\android\Desktop\david\TCC-2.0\TCC-2.0\obj\Debug\net6.0\TCC-Core.AssemblyInfo.cs
+C:\Users\android\Desktop\david\TCC-2.0\TCC-2.0\obj\Debug\net6.0\TCC-Core.csproj.CoreCompileInputs.cache
+C:\Users\android\Desktop\david\TCC-2.0\TCC-2.0\obj\Debug\net6.0\TCC-Core.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\android\Desktop\david\TCC-2.0\TCC-2.0\obj\Debug\net6.0\TCC-Core.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\android\Desktop\david\TCC-2.0\TCC-2.0\obj\Debug\net6.0\TCC-Core.RazorAssemblyInfo.cache
+C:\Users\android\Desktop\david\TCC-2.0\TCC-2.0\obj\Debug\net6.0\TCC-Core.RazorAssemblyInfo.cs

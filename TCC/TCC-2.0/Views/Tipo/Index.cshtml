@@ -1,0 +1,72 @@
+﻿@model IEnumerable<TCC_2._0.Models.TIPO >
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<link href="~/css/pgCrud.css" rel="stylesheet"/>
+
+<body class="fundo">
+
+    <h2>Lista de Tipos</h2>
+
+    <p><a class="btn btn-info" href="/Tipo/Criar">Criar novo Tipo</a></p>
+    <div>
+
+        <table class="table" id="table-Tipo">
+            <thead class="thead-dark">
+                <tr class="nomes-titulo">
+                    <th scope="col">#</th>
+                    <th scope="col">Descrição</th>
+                    <th>Opções</th>
+
+                </tr>
+            </thead>
+            <tbody class="teste">
+                @foreach (var item in Model)
+                {
+
+                    <tr>
+                        <th scope="row">@item.TIPID</th>
+                        <td>@item.TIPNOME</td>
+
+
+
+                        <td class="butoes">
+
+                            <a href="/Tipo/editar?id=@item.TIPID"><button type="button" class="btn btn-warning">Editar</button></a>
+                            <a href="/Tipo/deletar?id=@item.TIPID"><button type="button" class="btn btn-danger">Deletar</button></a>
+
+                        </td>
+                    </tr>
+                }
+
+
+            </tbody>
+        </table>
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <p><a href="/ProTipo/Alerta" class="btn btn-primary">Voltar &raquo;</a></p>
+
+</body>
+
+
+
+
+
+
+
+
+
+

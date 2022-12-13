@@ -1,0 +1,37 @@
+﻿@model  TCC_2._0.Models.CATEGORIA
+
+
+@{
+    ViewBag.Title = "Editar";
+}
+
+<link href="~/css/funcaoCrud.css" rel="stylesheet"/>
+
+<div class="tudo">
+    <div class="edite">
+        <form action="/Categorias/Editar?id=@Model.CATID" method="post">
+            <div>
+                <h2>Editando @Model.CATDESCRICAO</h2>
+                <br />
+                <h5>Descrição</h5>
+            </div>
+            <div class="descricao-edit">
+                <class ="form-group">
+                
+                    <input type="text" class="form-control"
+                           maxlength="100" id="descricao" name="descricao"
+                           value="@Model.CATDESCRICAO"
+                           required />
+            </div>
+      
+            <div>
+                    <div>
+                        <button type="submit" class="btn btn-success">Salvar</button>
+                        <a href="/Categorias/index" class="btn btn-primary">Voltar</a>
+                    </div>
+            </div>
+        </form>
+
+     </div>
+</div>
+

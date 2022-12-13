@@ -1,0 +1,90 @@
+@model  TCC_2._0.Models.PROTIPO
+
+
+@{
+    ViewBag.Title = "Editar";
+}
+
+<link href="~/css/pgalerta.css" rel="stylesheet"/>
+
+<h1>Editando</h1>
+
+<div >
+    <form action="/ProTipo/Editar?id=@Model.PTID" method="post">
+
+
+        <div>
+            <h5>Produto: </h5>
+            <select type="text" class="form-control" id="produto" name="produto">
+
+                @foreach (var item in ViewBag.listaProduto)
+                {
+                    <option value="@item.PROID">@item.PRODESCRICAO</option>
+                }
+
+            </select>
+
+        </div>
+
+        <div>
+            <h5>Tipo: </h5>
+            <select type="text" class="form-control" id="tipo" name="tipo">
+
+                @foreach (var item in ViewBag.listaTipo)
+                {
+                    <option value="@item.TIPID">@item.TIPNOME</option>
+                }
+
+            </select>
+
+        </div>
+
+        @*<div>
+            <class ="form-group">
+                <h5>Máximo</h5>
+                <input type="number" class="form-control"
+                       id="maximo" name="maximo" min="0"
+                       value="@Model.PTMAXIMO"
+                       required />
+
+        </div>*@
+
+        <div>
+            <class ="form-group">
+                <h5>Mínimo</h5>
+                <input type="number" class="form-control"
+                       id="minimo" name="minimo" min="0"
+                       value="@Model.PTMINIMO"
+                       required />
+
+        </div>
+
+        <div>
+            <class ="form-group">
+                <h5>Estoque</h5>
+                <input type="number" class="form-control"
+                       id="estoque" name="estoque" min="0"
+                       value="@Model.PTESTOQUE"
+                       required />
+        </div>
+
+        <div class="form-group">
+            <h5>Imagem</h5>
+            <input type="file" class="form-control"
+                   id="imagem" name="imagem" re />
+        </div>
+
+        <div>
+
+
+
+            <div>
+                <button type="submit" class="btn btn-success">Salvar</button>
+                <a href="/protipo/index" class="btn btn-primary">Voltar</a>
+
+            </div>
+
+
+        </div>
+    </form>
+</div>

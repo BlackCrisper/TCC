@@ -1,0 +1,71 @@
+@model  TCC_2._0.Models.PROTIPO
+
+@{
+    ViewBag.Title = "Deletar";
+}
+
+<link href="~/css/funcaoCrud.css" rel="stylesheet"/>
+
+
+<div class="tudo">
+    <form action="/ProTipo/ConfirmeDelete?id=@Model.PTID" method="post">
+        <div>
+            <h1>Deletando</h1>
+            <br />
+            <h5>Produto</h5>
+        </div>
+        <div class="descricao-delete">
+            
+            <class ="form-group">
+                
+                <label> @Model.PRODUTO.PRODESCRICAO: @Model.TIPO.TIPNOME </label>
+        </div>
+         <br />
+
+         @*<div>
+             <h5>Tipo</h5>
+         </div>
+
+        <div class="descricao-delete">
+            <class ="form-group">
+                
+                <label>@Model.TIPO.TIPNOME</label>
+        </div>
+         <br />*@
+
+         <div>
+             <h5>Mínimo</h5>
+         </div>
+
+        <div class="descricao-delete">
+            <class ="form-group">
+                
+                <label>@Model.PTMINIMO</label>
+        </div>
+         <br />
+
+         <div>
+             <h5>Estoque</h5>
+         </div>
+        @*<div class="descricao-delete">
+            <class ="form-group">
+                <h5>Máximo</label>
+                <label>@Model.</label>
+        </div>*@
+
+        <div class="descricao-delete">
+            <class ="form-group">
+                
+                <label>@Model.PTESTOQUE</label>
+        </div>
+         <br />
+
+        <div>
+            <p><a href="/protipo/index" class="btn btn-primary">Voltar &raquo;</a></p>
+            <button type="submit" class="btn btn-danger">Deletar</button>
+        </div>
+
+
+
+    </form>
+</div>

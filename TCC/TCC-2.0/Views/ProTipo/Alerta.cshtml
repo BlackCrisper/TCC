@@ -1,0 +1,52 @@
+﻿@model IEnumerable<TCC_2._0.Models.PROTIPO>
+
+
+@{
+    ViewBag.Title = "Alerta";
+}
+
+<link href="~/css/pgalerta.css" rel="stylesheet"/>
+
+<body class="fundo">
+    <div class="alerta">
+          <div class="fundo-alerta">
+        <h2>Produtos Com Estoque Baixo</h2>
+
+      <div>         
+          @foreach (var item in Model)
+            {
+                @if (item.PTESTOQUE < item.PTMINIMO)
+             {
+
+                        
+                <div
+                 style="  background-color: darkred;
+                          height: 100px;
+                          width: 150px;
+                          border-radius: 5px;
+                          border:solid black;
+                          display: inline-block;
+                                      
+                          vertical-align: central;
+                          color: white">
+
+                <div>                   
+                    <label>Produto: @item.PRODUTO.PRODESCRICAO @item.TIPO.TIPNOME</label><br/>
+                    <label>Em Estoque: @item.PTESTOQUE </label>
+                </div>
+
+              </div>
+                          
+           }
+         }
+    </div>
+    <br/>
+    <p><a href="/ProTipo/SaidaEstoque" class="btn btn-primary">Entrar &raquo;</a></p>
+  </div>
+    </div>
+ 
+</body>
+
+
+
+

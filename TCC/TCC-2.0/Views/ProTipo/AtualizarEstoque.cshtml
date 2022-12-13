@@ -1,0 +1,39 @@
+﻿@model  TCC_2._0.Models.PROTIPO
+
+
+@{
+    ViewBag.Title = "AtualizarEstoque";
+}
+
+<link href="~/css/funcaoCrud.css" rel="stylesheet"/>
+
+<div class="tudo">
+    <div class="create">
+        <form action="/ProTipo/AtualizarEstoque?id=@Model.PTID" method="post">
+            <div>
+                <h2>Atualizando Estoque</h2>
+                  <br />
+                <h5>Quantidade</h5>
+            </div>
+
+            <div class="descricao-create">
+                <class ="form-group">
+                
+                    <input type="number" class="form-control"
+                           id="qtd" name="qtd" min="0"
+                    
+                           required />
+            </div>
+
+       
+            <div>
+                <div>
+                    <button type="submit" class="btn btn-success">Salvar</button>
+                    <a href="/ProTipo/Alerta" class="btn btn-primary">Voltar</a>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+

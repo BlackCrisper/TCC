@@ -1,0 +1,99 @@
+﻿@model IEnumerable<TCC_2._0.Models.CATEGORIA>
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<link href="~/css/pgCrud.css" rel="stylesheet"/>
+
+<body class="fundo">
+
+    <h2>Lista de Categorias</h2>
+
+    <p><a class="btn btn-info" href="/Categorias/Criar">Criar nova Categoria &raquo;</a></p>
+    <div >
+
+
+        <table class="table" id="table-Categorias">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Descrição</th>
+                    <th>Opções</th>
+
+                </tr>
+            </thead>
+            <tbody class="teste">
+                @foreach (var item in Model)
+                {
+
+                    <tr>
+                        <th scope="row">@item.CATID</th>
+                        <td>@item.CATDESCRICAO</td>
+
+
+
+
+
+
+                        <td class="butoes">
+
+                            <a href="/categorias/editar?id=@item.CATID"><button type="button" class="btn btn-warning">Editar</button></a>
+                            <a href="/categorias/deletar?id=@item.CATID"><button type="button" class="btn btn-danger">Deletar</button></a>
+
+                        </td>
+                    </tr>
+                }
+
+
+
+
+            </tbody>
+        </table>
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <p><a href="/ProTipo/Alerta" class="btn btn-primary">Voltar &raquo;</a></p>
+
+</body>
+
+
+
+@*<style>
+
+    tr {
+        color: white;
+    }
+
+  
+
+
+    .fundo {
+    background-image: url("https://st.depositphotos.com/2069237/2231/i/450/depositphotos_22310611-stock-photo-blackboard-chalkboard-texture.jpg");
+      background-repeat: no-repeat;
+     
+     background-attachment: fixed;
+     background-size: 100% 100%;
+}    
+    
+</style>*@
+
+
+
+
+
+
+
+
+
+
+
